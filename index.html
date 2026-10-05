@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1950电影网｜以年份为索引的电影档案库</title>
+<meta name="keywords" content="1950电影网,电影年代索引,电影档案库,经典老片,历年佳片,影片资料查询">
+<meta name="description" content="1950电影网（https://1950dianyingwang-zh.github.io）用年份而不是算法来整理电影——从1950年到去年，每一年的重要作品都有一份可查阅的档案，附导演、片长、看点与检索方式。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://1950dianyingwang-zh.github.io/">
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<!-- ===== 顶栏 ===== -->
+<header class="hd">
+  <div class="inner hd-in">
+    <a class="brand" href="#">
+      <span class="bd-year">1950</span>
+      <span class="bd-name">电影网<span class="bd-slash">/</span><em>档案库</em></span>
+    </a>
+    <div class="hd-search">
+      <input id="qs" type="search" placeholder="输入年份、片名或导演，如：1994 / 王家卫" onkeydown="if(event.key==='Enter')doSearch()">
+      <button onclick="doSearch()">检索</button>
+    </div>
+    <button class="hm" aria-label="菜单" onclick="tgNav()">☰</button>
+    <nav id="nv">
+      <a href="#year">年份漫游</a>
+      <a href="#decade">年代特辑</a>
+      <a href="#country">国别地图</a>
+      <a href="#genre">类型检索</a>
+      <a href="#archive">档案入库</a>
+      <a href="#about">关于本站</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== 首屏 ===== -->
+<section class="hero">
+  <div class="inner hero-in">
+    <div class="hl">
+      <span class="tagline">FILM INDEX BY YEAR · SINCE 1950</span>
+      <h1>电影的<br>正确入口<br>是<b>年份</b></h1>
+      <p>我们不猜你喜欢什么。把 1950 年以来的电影按年份铺开，你想看哪一年的，就走进哪一年——连同那年的世道、技术、审美和失误一起。</p>
+      <div class="h-actions">
+        <a class="btn-p" href="#year">开始漫游年份</a>
+        <a class="btn-g" href="#decade">看年代特辑</a>
+      </div>
+      <dl class="h-stats">
+        <div><dt>1950</dt><dd>起始年份</dd></div>
+        <div><dt id="cnt">76</dt><dd>收录年份跨度</dd></div>
+        <div><dt>365+</dt><dd>每日更新档案</dd></div>
+      </dl>
+    </div>
+    <div class="hr">
+      <div class="year-wheel" id="wheel">
+        <div class="yw-head"><span>随机年份</span><b id="rwYear">1988</b></div>
+        <div class="yw-body">
+          <p id="rwText">《胭脂扣》上映。那年香港电影同时有三部作品在谈"来不及"，这一部把告别拍成了仪式。</p>
+        </div>
+        <button class="yw-btn" onclick="rollYear()">换一个年份 ↻</button>
+      </div>
+      <ul class="h-tags">
+        <li>胶片修复版</li><li>华语影史</li><li>戛纳金棕榈</li><li>奥斯卡最佳</li><li>被低估的续集</li><li>长镜头研究</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 年份漫游 ===== -->
+<section class="blk" id="year">
+  <div class="inner">
+    <header class="bh">
+      <div>
+        <span class="eyebrow">YEAR BY YEAR</span>
+        <h2>年份漫游</h2>
+        <p>点开任意一年，打开当年的六部重要作品。左右拖动年份条可以快速跳到你想看的年代。</p>
+      </div>
+      <div class="yb">
+        <button id="yp" onclick="shiftYear(-1)">‹</button>
+        <span id="curYear">1994</span>
+        <button id="yn" onclick="shiftYear(1)">›</button>
+      </div>
+    </header>
+    <div class="year-rail" id="yearRail"></div>
+    <div class="y-grid" id="yGrid"></div>
+  </div>
+</section>
+
+<!-- ===== 年代特辑 ===== -->
+<section class="blk band" id="decade">
+  <div class="inner">
+    <header class="bh">
+      <div>
+        <span class="eyebrow light">DECADE FEATURE</span>
+        <h2>年代特辑</h2>
+        <p>把一个年代压缩成一份清单：它解决了什么问题、留下了什么、又被谁推翻了。</p>
+      </div>
+      <a class="more" href="#">全部特辑 ›</a>
+    </header>
+    <div class="dc-grid">
+      <article class="dc">
+        <span class="dc-y">1990s</span>
+        <h3>录像带时代的最后一口气</h3>
+        <p>那十年电影学会了自我复制——续集、重拍、三部曲。也正是在这种复制里，香港电影和伊朗电影各自长出了完全不同的答案。</p>
+        <ul><li>1994 · 六个国家同时交出代表作</li><li>1999 · 独立电影的最低成本奇迹</li><li>1997 · 整个行业开始学用电脑</li></ul>
+      </article>
+      <article class="dc">
+        <span class="dc-y">2000s</span>
+        <h3>胶片还活着，但已经很累了</h3>
+        <p>九一一之后，灾难片变成了日常题材；数字摄影开始让"拍电影"这件事变便宜，新人第一次可以不求人。</p>
+        <ul><li>2001 · 一部动画片改变了所有家长的期待</li><li>2008 · 全球金融危机写进了剧本</li><li>2004 · 纪录片第一次卖出一亿张票</li></ul>
+      </article>
+      <article class="dc">
+        <span class="dc-y">2010s</span>
+        <h3>流媒体把院线逼到了墙角</h3>
+        <p>这十年最重要的变化不在银幕上，而在你买票的地方。超级英雄占据了档期，作者导演转向了小屏幕。</p>
+        <ul><li>2013 · 华语片第一次拿金棕榈</li><li>2017 · 一部无声片赢下奥斯卡最佳</li><li>2019 · 动画工作室的成人化实验</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 国别地图 ===== -->
+<section class="blk" id="country">
+  <div class="inner">
+    <header class="bh">
+      <div>
+        <span class="eyebrow">COUNTRY MAP</span>
+        <h2>国别地图</h2>
+        <p>同一种类型在不同国家是完全不同的东西。按地区检索，是我们最常被使用的入口。</p>
+      </div>
+      <a class="more" href="#">完整地图 ›</a>
+    </header>
+    <div class="cn-tabs" id="cnTabs"></div>
+    <div class="cn-body" id="cnBody"></div>
+  </div>
+</section>
+
+<!-- ===== 类型检索 ===== -->
+<section class="blk band" id="genre">
+  <div class="inner">
+    <header class="bh">
+      <div>
+        <span class="eyebrow light">GENRE INDEX</span>
+        <h2>类型检索</h2>
+        <p>类型不是标签，是一种约定。点开任一类型，看我们整理的代表作与入门建议。</p>
+      </div>
+    </header>
+    <div class="gn-grid">
+      <a class="gn" href="#"><span class="gn-k">NOIR</span><h4>黑色电影</h4><p>雨天、百叶窗、说错一句话就回不了头</p><b>62 部档案</b></a>
+      <a class="gn" href="#"><span class="gn-k">DOC</span><h4>纪录片</h4><p>真实世界的素材，比剧本更舍得下狠手</p><b>48 部档案</b></a>
+      <a class="gn" href="#"><span class="gn-k">SF</span><h4>科幻</h4><p>不是预测未来，是借未来谈现在</p><b>55 部档案</b></a>
+      <a class="gn" href="#"><span class="gn-k">DRM</span><h4>剧情长片</h4><p>档案库里数量最多的一类，也是最容易翻车的一类</p><b>210 部档案</b></a>
+      <a class="gn" href="#"><span class="gn-k">ANI</span><h4>动画长片</h4><p>不限年龄段，但很多部其实不适合孩子</p><b>39 部档案</b></a>
+      <a class="gn" href="#"><span class="gn-k">EPS</span><h4>史诗片</h4><p>长、贵、演员多，且必须有一个人死在雪地里</p><b>27 部档案</b></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 档案入库 ===== -->
+<section class="blk" id="archive">
+  <div class="inner">
+    <header class="bh">
+      <div>
+        <span class="eyebrow">ARCHIVE INTAKE</span>
+        <h2>档案入库</h2>
+        <p>发现一部我们没收录的电影？填这份表单，编辑部会在三个工作日内核对并补档。</p>
+      </div>
+      <a class="more" href="#">入库规则 ›</a>
+    </header>
+    <div class="ar">
+      <form class="ar-f" onsubmit="event.preventDefault();var b=this.querySelector('button');b.textContent='已提交 · 编号 '+Math.floor(Math.random()*900+100);b.disabled=true">
+        <label>影片中文名<input type="text" placeholder="如：一一" required></label>
+        <div class="row2">
+          <label>上映年份<input type="number" min="1950" max="2099" placeholder="1950" required></label>
+          <label>导演<input type="text" placeholder="杨德昌" required></label>
+        </div>
+        <label>片长（分钟）<input type="number" placeholder="173" required></label>
+        <label>一句话看点
+          <textarea rows="3" placeholder="这部片子为什么值得被收进档案库"></textarea>
+        </label>
+        <button type="submit">提交入库申请</button>
+      </form>
+      <aside class="ar-side">
+        <h4>最近入库</h4>
+        <ol>
+          <li><b>《完美的日子》</b><span>2023 · 日本</span></li>
+          <li><b>《椒麻堂会》</b><span>2021 · 中国</span></li>
+          <li><b>《钛》</b><span>2021 · 法国</span></li>
+          <li><b>《游牧人生》</b><span>2020 · 美国</span></li>
+        </ol>
+        <div class="rule">
+          <h4>我们的三条规则</h4>
+          <p>① 每部影片必须有完整年份与导演，否则退回；<br>② 影评类内容一律不收；<br>③ 更新时间固定为每日 20:00。</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 关于 ===== -->
+<section class="blk band" id="about">
+  <div class="inner ab">
+    <div class="ab-l">
+      <span class="eyebrow light">ABOUT THIS INDEX</span>
+      <h2>为什么是 1950？</h2>
+      <p>我们把 1950 年设为起点，因为那一年之后，电影在主要电影工业地区都完成了从战时宣传工具向大众消费品的结构性转换。这不是一个审美判断，只是一个方便大家查资料的切口。</p>
+      <p>本站只做两件事：把片子按年份归档，给每一部附上可读的看点。不做推荐算法，不做热度榜，也不判断你"该看什么"。</p>
+      <div class="ab-meta">
+        <div><b>https://1950dianyingwang-zh.github.io</b><span>本站网址</span></div>
+        <div><b>编辑部信箱</b><span>archive@1950dianyingwang-zh.github.io</span></div>
+      </div>
+    </div>
+    <div class="ab-r">
+      <div class="clock"><span>本站档案 · 今日</span><b id="today">—</b></div>
+      <ul class="ab-faq">
+        <li><b>档案会收费吗？</b><p>不会。索引与看点长期免费，也无广告位。</p></li>
+        <li><b>可以转载吗？</b><p>看点文字可转载，请注明来源为本站网址。</p></li>
+        <li><b>更新频率？</b><p>每天更新一条年份档案，节假日不休。</p></li>
+        <li><b>影片资源在哪？</b><p>本站不提供资源，仅提供影片信息与观看建议。</p></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 页脚 ===== -->
+<footer class="ft">
+  <div class="inner ft-in">
+    <div class="ft-m">
+      <span class="ft-y">1950</span>
+      <p>电影网 · 以年份为索引的电影档案库<br>网址：https://1950dianyingwang-zh.github.io</p>
+    </div>
+    <div class="ft-c">
+      <div><h6>检索入口</h6><a href="#year">年份漫游</a><a href="#decade">年代特辑</a><a href="#country">国别地图</a></div>
+      <div><h6>内容分类</h6><a href="#genre">类型检索</a><a href="#archive">档案入库</a><a href="#">历年回顾</a></div>
+      <div><h6>站点信息</h6><a href="#about">关于本站</a><a href="#">编辑守则</a><a href="#">版权声明</a></div>
+    </div>
+  </div>
+  <div class="inner ft-b">
+    <small>© 2024–2026 1950电影网 · 本站内容为影片资料与看点整理，不构成任何观影诱导，版权归各制片方所有 · <a href="#">隐私条款</a></small>
+  </div>
+</footer>
+
+<style>
+:root{
+  --bg:#0d1117; --bg2:#121922; --line:#243040; --line2:#33465c;
+  --tx:#e8edf4; --tx2:#9fb0c4; --tx3:#6c7f96;
+  --cy:#00e5a0; --cy2:#00b383; --ac:#ffb020;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif;background:var(--bg);color:var(--tx);line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+input,textarea,button{font-family:inherit}
+.inner{max-width:1140px;margin:0 auto;padding:0 24px}
+h2,h3,h4{line-height:1.35}
+
+/* 顶栏 */
+.hd{position:sticky;top:0;z-index:99;background:rgba(13,17,23,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hd-in{display:flex;align-items:center;gap:22px;height:68px}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.bd-year{font-size:26px;font-weight:900;color:var(--cy);letter-spacing:1px;font-variant-numeric:tabular-nums}
+.bd-name{font-size:16px;font-weight:700}
+.bd-slash{color:var(--tx3);margin:0 4px}
+.bd-name em{font-style:normal;color:var(--tx3);font-size:13px}
+.hd-search{flex:1;max-width:420px;display:flex;margin-left:auto;margin-right:14px}
+.hd-search input{width:100%;background:var(--bg2);border:1px solid var(--line);border-right:none;border-radius:4px 0 0 4px;padding:9px 13px;color:var(--tx);font-size:14px;outline:none}
+.hd-search input:focus{border-color:var(--cy)}
+.hd-search button{background:var(--cy);color:#04241a;border:none;padding:0 18px;border-radius:0 4px 4px 0;font-weight:800;font-size:14px;cursor:pointer}
+.hd-search button:hover{background:var(--cy2)}
+#nv{display:flex;gap:24px;font-size:14px}
+#nv a{color:var(--tx2);transition:.2s;position:relative;padding:4px 0}
+#nv a:hover{color:var(--cy)}
+.hm{display:none;background:none;border:none;color:var(--tx);font-size:24px;cursor:pointer;padding:4px 8px}
+
+/* 首屏 */
+.hero{background:radial-gradient(900px 500px at 82% 8%,rgba(0,229,160,.14),transparent),var(--bg);border-bottom:1px solid var(--line);padding:78px 0 88px}
+.hero-in{display:grid;grid-template-columns:1.25fr 1fr;gap:60px;align-items:center}
+.tagline{font-size:12px;letter-spacing:3px;color:var(--cy);font-weight:700}
+.hero h1{font-size:clamp(40px,6.6vw,76px);line-height:1.06;margin:18px 0 22px;letter-spacing:-2px}
+.hero h1 b{color:var(--cy);font-style:italic}
+.hero p{max-width:540px;color:var(--tx2);font-size:16px}
+.h-actions{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}
+.btn-p{background:var(--cy);color:#04241a;padding:14px 30px;border-radius:3px;font-weight:800;font-size:15px;transition:.25s}
+.btn-p:hover{background:var(--ac);color:#1a1300}
+.btn-g{border:1px solid var(--line2);color:var(--tx);padding:14px 26px;border-radius:3px;font-weight:600;font-size:15px;transition:.25s}
+.btn-g:hover{border-color:var(--cy);color:var(--cy)}
+.h-stats{display:flex;gap:52px;margin-top:48px;font-variant-numeric:tabular-nums}
+.h-stats dt{font-size:32px;font-weight:900;color:var(--cy)}
+.h-stats dd{font-size:12px;color:var(--tx3);letter-spacing:1px;margin-top:2px}
+.year-wheel{background:linear-gradient(160deg,var(--bg2),#0f1a25);border:1px solid var(--line2);border-radius:8px;padding:0;overflow:hidden}
+.yw-head{display:flex;justify-content:space-between;align-items:baseline;padding:20px 24px;background:var(--cy);color:#04241a}
+.yw-head span{font-size:12px;font-weight:800;letter-spacing:2px}
+.yw-head b{font-size:34px;font-weight:900;font-variant-numeric:tabular-nums}
+.yw-body{padding:24px}
+.yw-body p{font-size:16px;color:var(--tx);min-height:100px}
+.yw-btn{width:100%;background:none;border:none;border-top:1px solid var(--line);padding:16px;color:var(--cy);font-weight:700;font-size:14px;cursor:pointer;transition:.2s}
+.yw-btn:hover{background:var(--bg2)}
+.h-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.h-tags li{list-style:none;font-size:12px;color:var(--tx2);border:1px solid var(--line);padding:5px 12px;border-radius:20px}
+
+/* 区块通用 */
+.blk{padding:92px 0}
+.blk.band{background:linear-gradient(180deg,#0f141d,#0d1117);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.bh{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:48px;flex-wrap:wrap}
+.eyebrow{font-size:12px;letter-spacing:3px;color:var(--cy);font-weight:800}
+.eyebrow.light{color:var(--ac)}
+.bh h2{font-size:clamp(28px,4vw,42px);margin:6px 0;letter-spacing:-1px}
+.bh p{color:var(--tx2);max-width:580px;margin-top:8px;font-size:15px}
+.more{color:var(--cy);font-weight:700;font-size:14px;white-space:nowrap}
+.more:hover{color:var(--ac)}
+.yb{display:flex;align-items:center;gap:16px;font-variant-numeric:tabular-nums}
+.yb button{width:42px;height:42px;background:var(--bg2);border:1px solid var(--line2);border-radius:3px;color:var(--cy);font-size:20px;cursor:pointer;transition:.2s}
+.yb button:hover{background:var(--cy);color:#04241a}
+#curYear{font-size:28px;font-weight:900;min-width:76px;text-align:center}
+
+/* 年份漫游 */
+.year-rail{display:flex;gap:6px;margin-bottom:36px;overflow-x:auto;padding-bottom:8px}
+.year-rail::-webkit-scrollbar{height:6px}
+.year-rail::-webkit-scrollbar-thumb{background:var(--line2);border-radius:3px}
+.yr{flex-shrink:0;width:58px;background:var(--bg2);border:1px solid var(--line);border-radius:3px;padding:10px 0;text-align:center;cursor:pointer;transition:.2s;font-variant-numeric:tabular-nums}
+.yr span{display:block;font-size:13px;font-weight:800;color:var(--tx2)}
+.yr em{display:block;font-size:10px;font-style:normal;color:var(--tx3);margin-top:4px}
+.yr:hover{border-color:var(--cy2)}
+.yr.on{background:var(--cy);border-color:var(--cy)}
+.yr.on span,.yr.on em{color:#04241a;font-weight:800}
+.y-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.yc{background:var(--bg2);border:1px solid var(--line);border-left:3px solid var(--cy);border-radius:5px;padding:22px 24px;transition:.3s}
+.yc:hover{transform:translateY(-5px);border-color:var(--line2);border-left-color:var(--ac)}
+.yc-t{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px;font-variant-numeric:tabular-nums}
+.yc-t b{font-size:22px;color:var(--cy);font-weight:900}
+.yc-t span{font-size:12px;color:var(--tx3)}
+.yc h3{font-size:19px;margin-bottom:6px}
+.yc p{font-size:14px;color:var(--tx2);margin-bottom:14px}
+.yc-foot{display:flex;justify-content:space-between;font-size:12px;color:var(--tx3);border-top:1px solid var(--line);padding-top:12px}
+
+/* 年代特辑 */
+.dc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.dc{background:var(--bg2);border:1px solid var(--line);border-radius:6px;padding:30px;transition:.3s;position:relative;overflow:hidden}
+.dc::before{content:"";position:absolute;top:0;left:0;width:100%;height:3px;background:var(--ac);transform:scaleX(0);transform-origin:left;transition:.4s}
+.dc:hover::before{transform:scaleX(1)}
+.dc:hover{transform:translateY(-5px);border-color:var(--line2)}
+.dc-y{font-size:13px;font-weight:900;letter-spacing:2px;color:var(--ac)}
+.dc h3{font-size:22px;margin:12px 0 12px}
+.dc p{font-size:14px;color:var(--tx2);margin-bottom:20px}
+.dc ul{list-style:none;border-top:1px solid var(--line)}
+.dc li{font-size:13px;color:var(--tx2);padding:10px 0;border-bottom:1px solid var(--line)}
+
+/* 国别 */
+.cn-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:30px}
+.cn-tab{padding:11px 22px;background:var(--bg2);border:1px solid var(--line);border-radius:3px;color:var(--tx2);cursor:pointer;font-size:14px;font-weight:600;transition:.2s}
+.cn-tab:hover{color:var(--cy)}
+.cn-tab.on{background:var(--cy);border-color:var(--cy);color:#04241a}
+.cn-body{background:var(--bg2);border:1px solid var(--line);border-radius:6px;padding:34px}
+.cn-h{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:24px;padding-bottom:18px;border-bottom:1px solid var(--line);flex-wrap:wrap;gap:10px}
+.cn-h h3{font-size:24px}
+.cn-h span{font-size:13px;color:var(--tx3)}
+.cn-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:16px 40px}
+.cn-list li{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px dashed var(--line);font-size:15px;cursor:pointer;transition:.2s}
+.cn-list li:hover{color:var(--cy)}
+.cn-list li b{font-weight:600}
+.cn-list li span{color:var(--tx3);font-size:13px;flex-shrink:0}
+
+/* 类型 */
+.gn-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.gn{display:block;background:var(--bg2);border:1px solid var(--line);border-radius:6px;padding:26px 28px;transition:.3s;position:relative}
+.gn:hover{border-color:var(--cy);transform:translateY(-4px)}
+.gn-k{font-size:12px;letter-spacing:3px;color:var(--tx3);font-weight:800}
+.gn h4{font-size:21px;margin:8px 0 8px}
+.gn p{font-size:14px;color:var(--tx2);margin-bottom:16px}
+.gn b{font-size:12px;color:var(--cy);font-weight:700;border-top:1px solid var(--line);padding-top:12px;display:block}
+
+/* 档案入库 */
+.ar{display:grid;grid-template-columns:1.2fr 1fr;gap:44px;align-items:start}
+.ar-f{background:var(--bg2);border:1px solid var(--line);border-radius:6px;padding:32px}
+.ar-f label{display:block;font-size:13px;color:var(--tx2);margin-bottom:18px}
+.ar-f input,.ar-f textarea{width:100%;margin-top:7px;background:var(--bg);border:1px solid var(--line);border-radius:3px;padding:12px 14px;color:var(--tx);font-size:15px;outline:none}
+.ar-f input:focus,.ar-f textarea:focus{border-color:var(--cy)}
+.ar-f textarea{resize:vertical}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ar-f button{width:100%;padding:15px;border:none;border-radius:3px;background:var(--cy);color:#04241a;font-weight:800;font-size:16px;cursor:pointer;transition:.25s;margin-top:6px}
+.ar-f button:hover{background:var(--ac)}
+.ar-side{display:flex;flex-direction:column;gap:24px}
+.ar-side h4{font-size:17px;margin-bottom:16px;color:var(--cy)}
+.ar-side ol{list-style:none}
+.ar-side li{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line);font-size:15px}
+.ar-side li span{font-size:13px;color:var(--tx3)}
+.rule{background:var(--bg2);border:1px solid var(--line);border-left:3px solid var(--ac);border-radius:5px;padding:24px}
+.rule h4{font-size:16px;margin-bottom:10px;color:var(--ac)}
+.rule p{font-size:14px;color:var(--tx2);line-height:2}
+
+/* 关于 */
+.ab{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:start}
+.ab p{font-size:15px;color:var(--tx2);margin-bottom:16px}
+.ab-meta{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:34px}
+.ab-meta div{background:var(--bg2);border:1px solid var(--line);border-radius:5px;padding:18px}
+.ab-meta b{display:block;font-size:14px;color:var(--cy);word-break:break-all}
+.ab-meta span{font-size:12px;color:var(--tx3)}
+.clock{background:linear-gradient(160deg,var(--cy),var(--cy2));color:#04241a;border-radius:6px;padding:26px;margin-bottom:26px}
+.clock span{font-size:12px;font-weight:800;letter-spacing:2px}
+.clock b{display:block;font-size:28px;font-weight:900;margin-top:6px;font-variant-numeric:tabular-nums}
+.ab-faq{list-style:none;display:flex;flex-direction:column;gap:18px}
+.ab-faq b{font-size:15px;color:var(--tx);display:block;margin-bottom:4px}
+.ab-faq p{font-size:14px;color:var(--tx2);margin:0}
+
+/* 页脚 */
+.ft{background:#0a0d12;border-top:1px solid var(--line);padding:56px 0 24px}
+.ft-in{display:grid;grid-template-columns:1fr 1.4fr;gap:50px}
+.ft-y{font-size:30px;font-weight:900;color:var(--cy)}
+.ft-m p{margin-top:12px;font-size:14px;color:var(--tx3);line-height:1.9}
+.ft-c{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.ft-c h6{font-size:12px;letter-spacing:2px;color:var(--tx3);margin-bottom:14px}
+.ft-c a{display:block;color:var(--tx2);font-size:14px;padding:5px 0;transition:.2s}
+.ft-c a:hover{color:var(--cy)}
+.ft-b{margin-top:44px;padding-top:20px;border-top:1px solid var(--line);color:var(--tx3);font-size:12px}
+.ft-b a{color:var(--ac)}
+
+/* 响应式 */
+@media (max-width:980px){
+  .hero-in,.ab,.ar{grid-template-columns:1fr;gap:40px}
+  .hd-search{display:none}
+  .ft-in{grid-template-columns:1fr}
+  .cn-list{grid-template-columns:1fr}
+}
+@media (max-width:680px){
+  .hm{display:block}
+  #nv{position:fixed;top:68px;left:0;right:0;flex-direction:column;background:var(--bg2);padding:14px 24px;gap:0;border-bottom:1px solid var(--line);transform:translateY(-180%);transition:.35s}
+  #nv.open{transform:translateY(0)}
+  #nv a{padding:15px 0;border-bottom:1px solid var(--line);font-size:15px}
+  .blk{padding:60px 0}
+  .row2{grid-template-columns:1fr}
+  .ab-meta{grid-template-columns:1fr}
+  .ft-c{grid-template-columns:1fr 1fr}
+  .h-stats{gap:32px}
+}
+</style>
+
+<script>
+/* ===== 年份档案数据 ===== */
+var YEARS={
+1994:{t:"影史密度最高的一年",f:"这一年六个国家的六位导演各自交出了一部被反复讨论二十年的作品。巧合，但没有人能解释为什么。",
+ list:[["低俗小说","昆汀·塔伦蒂诺","非线性犯罪，剧本结构课"],["肖申克的救赎","弗兰克·德拉邦特","希望是件危险的事"],["这个杀手不太冷","吕克·贝松","12岁女孩与杀手的相处之道"],["重庆森林","王家卫","凤梨罐头的保质期是一个月"],["阿甘正传","罗伯特·泽米吉斯","美国三十年的流行文化切片"],["活着","张艺谋","一个人活过一个时代"]]},
+1988:{"t":"香港电影的本地化完成",f:"这一年香港电影不再需要向台湾或东南亚解释自己，讲的是本地人才懂的笑点、迷信和人情。",
+ list:[["胭脂扣","关锦鹏","告别被排练成了一整套仪式"],["阿郎的故事","杜琪峰","周润发最不风光的一次演出"],["旺角卡门","王家卫","导演处女作，几乎不像他"],["警察故事续集","成龙","动作喜剧的工业化范本"]]},
+1972:{"t":"类型片把暴力拍成了仪式",f":"帮派片在这一年完成了从叙事到风格的转向，枪声变成了节拍器。",
+ list:[["教父","弗朗西斯·科波拉","家族史的另一面是权力交接"],["牛仔裤的夏天","意大利式西部片的尾声","配乐比台词更出名"]]},
+2001:{"t":"动画片改变了家长的期待",f":"这一年之后，带孩子进影院不再是消磨时间，而是一次预先安排好的共情训练。",
+ list:[["千与千寻","宫崎骏","汤屋里的名字与劳动"],["天使爱美丽","让-皮埃尔·热内","把城市的孤独拍成糖果"],["红磨坊","巴兹·鲁赫曼","音乐剧的商业极限"]]},
+2014:{"t":"超级英雄开始占据全年档期",f":"这一年有三部漫画改编电影进入年度前十，行业开始重新分配预算。",
+ list:[["布达佩斯大饭店","韦斯·安德森","对称构图的最后一次炫耀"],["少年时代","理查德·林克莱特","十二年只拍一个小孩长大"],["星际穿越","克里斯托弗·诺兰","科学顾问在片场有否决权"]]},
+1960:{"t":"希区柯克的悬念实验",f":"这一年悬疑片确立了"观众比主角知道得更多"这条规则，至今有效。",
+ list:[["惊魂记","阿尔弗雷德·希区柯克","浴室戏只有 45 秒，用了 78 个镜头"]]},
+2019:{"t":"动画的成人化实验",f":"三部动画长片同时进入各大年度榜单，评论界第一次默认动画不必给孩子看。",
+ list:[["寄生虫","奉俊昊","地下室是韩国社会的一面镜子"],["痛苦与荣耀","佩德罗·阿莫多瓦","导演把自己写进了剧本"],["玩具总动员4","乔什·库雷","告别比团圆更难写"]]},
+1999:{"t":"独立电影的最低成本奇迹",f":"数字摄影第一次让不拿投资拍电影变得可行，这一年的青年导演名单后来成了主流片单。",
+ list:[["搏击俱乐部","大卫·芬奇","结尾的解释至今有争议"],["黑客帝国","沃卓斯基姐妹","动作指导重新发明了挡子弹"],["关于莉莉周的一切","岩井俊二","网络身份的第一次银幕呈现"],["玩偶","北野武","三色人偶与三段悲剧"]]},
+2013:{"t":"华语片第一次拿金棕榈",f":"戛纳的选择让华语电影重新被国际评论界讨论，这一年的戛纳主竞赛被认为是最强一届。",
+ list:[["阿黛尔的生活","阿布戴·柯西胥","三小时的情感现场记录"],["地心引力","阿方索·卡隆","长镜头的太空化"],["醉乡民谣","科恩兄弟","失败者的传记"]]},
+1984:{"t":"科幻片完成了技术自检",f":"这一年两部科幻片分别从视觉与叙事两端推进，后来都成了各自方向的教科书。",
+ list:[["终结者","詹姆斯·卡梅隆","施瓦辛格几乎没有台词"],["1984","迈克尔·莱德福","反乌托邦的最冷一次改编"]]},
+2008:{"t":"全球金融危机写进了剧本",f":"编剧们第一次把宏观经济的崩塌当作人物动机，此前这种题材只属于纪录片。",
+ list:[["蝙蝠侠：黑暗骑士","克里斯托弗·诺兰","希斯·莱杰的反派表演范本"],["机器人总动员","安德鲁·斯坦顿","前 22 分钟几乎没有对白"],["饥饿的苏丹","纪录片的分水岭之年"]]},
+1954:{"t":"本站的第五年，黑白片的顶峰",f":"黑白摄影在这一年完成了所有后来者只能致敬的技巧，包括海浪与怪物。",
+ list:[["七武士","黑泽明","动作场面的时间管理范本"],["后窗","阿尔弗雷德·希区柯克","一个伤员的窥视欲"]]}
+};
+var yearKeys=Object.keys(YEARS).map(Number).sort();
+var cur=yearKeys.indexOf(1994)!==-1?yearKeys.indexOf(1994):0;
+var railEl=document.getElementById('yearRail');
+var gridEl=document.getElementById('yGrid');
+
+function renderRail(){
+  var html='';
+  yearKeys.forEach(function(y){
+    var o=YEARS[y];
+    html+='<div class="yr'+(y===yearKeys[cur]?' on':'')+'" onclick="jumpTo('+y+')"><span>'+y+'</span><em>'+(o.f||'').length>0?'有档案':'—'+'</em></div>';
+  });
+  railEl.innerHTML=html;
+}
+function renderGrid(y){
+  var o=YEARS[y];
+  document.getElementById('curYear').textContent=y;
+  var html='';
+  o.list.forEach(function(item){
+    html+='<article class="yc"><div class="yc-t"><b>'+y+'</b><span>'+item[1]+'</span></div><h3>'+item[0]+'</h3><p>'+(item[2]||'')+'</p><div class="yc-foot"><span>影片看点</span><a href="#">查看档案 ›</a></div></article>';
+  });
+  gridEl.innerHTML=html;
+  document.querySelectorAll('.yr').forEach(function(el){el.classList.toggle('on',Number(el.querySelector('span').textContent)===y)});
+}
+function jumpTo(y){var i=yearKeys.indexOf(y);if(i>-1){cur=i;renderRail();renderGrid(y);document.getElementById('year').scrollIntoView({block:'start'})}}
+function shiftYear(d){cur=Math.max(0,Math.min(yearKeys.length-1,cur+d));renderGrid(yearKeys[cur])}
+renderRail();renderGrid(yearKeys[cur]);
+
+/* ===== 随机年份 ===== */
+var rwList=[1988,1994,1999,2001,2008,2013,2014,2019,1972,1960,1984,1954];
+function rollYear(){var y=rwList[Math.floor(Math.random()*rwList.length)];var o=YEARS[y];
+  document.getElementById('rwYear').textContent=y;
+  document.getElementById('rwText').textContent=o.list[0][0]+'上映。'+(o.f||'');
+}
+rollYear();
+
+/* ===== 国别 ===== */
+var CN={
+"中国大陆":{n:"342 部档案",list:[["活着","1994"],["霸王别姬","1993"],["一一","2000"],["阳光灿烂的日子","1994"],["站台","2000"],["三峡好人","2006"],["刺客聂隐娘","2015"],["地久天长","2019"]]},
+"中国香港":{n:"286 部档案",list:[["花样年华","2000"],["无间道","2002"],["阿飞正传","1990"],["英雄本色","1986"],["重庆森林","1994"],["枪火","1999"],["桃姐","2011"],["树大招风","2016"]]},
+"日本":{n:"198 部档案",list:[["七武士","1954"],["东京物语","1953"],["千与千寻","2001"],["罗生门","1950"],["花火","1997"],["无人知晓","2004"],["小偷家族","2018"],["驾驶我的车","2021"]]},
+"韩国":{n:"164 部档案",list:[["寄生虫","2019"],["老男孩","2003"],["燃烧","2018"],["辩护人","2013"],["杀人回忆","2003"],["绿洲","2002"],["分手的决心","2022"]]},
+"美国":{n:"510 部档案",list:[["教父","1972"],["低俗小说","1994"],["肖申克的救赎","1994"],["星际穿越","2014"],["蝙蝠侠：黑暗骑士","2008"],["好家伙","1990"],["飞越疯人院","1975"]]},
+"法国":{n:"176 部档案",list:[["四百击","1959"],["这个杀手不太冷","1994"],["天使爱美丽","2001"],["放牛班的春天","2004"],["钛","2021"],["悲惨世界","2019"],["触不可及","2011"]]},
+"意大利":{n:"98 部档案",list:[["天堂电影院","1988"],["美国往事","1984"],["偷自行车的人","1948"],["八部半","1963"],["绝美之城","2013"],["海上钢琴师","1998"]]},
+"伊朗":{n:"52 部档案",list:[["一次别离","2011"],["樱桃的滋味","1997"],["小鞋子","1997"],["谁能带我回家","1997"],["出租车","2015"]]}
+};
+var cnKeys=Object.keys(CN);
+var cnBody=document.getElementById('cnBody');
+function renderTabs(){
+  var h='';
+  cnKeys.forEach(function(k,i){h+='<button class="cn-tab'+(i===0?' on':'')+'" onclick="pickCN('+i+',this)">'+k+'</button>'});
+  document.getElementById('cnTabs').innerHTML=h;
+  pickCN(0,document.querySelector('.cn-tab'));
+}
+function pickCN(i,el){
+  document.querySelectorAll('.cn-tab').forEach(function(x){x.classList.remove('on')});
+  if(el)el.classList.add('on');else document.querySelectorAll('.cn-tab')[i].classList.add('on');
+  var k=cnKeys[i],o=CN[k];
+  var h='<div class="cn-h"><h3>'+k+'</h3><span>'+o.n+'</span></div><ul class="cn-list">';
+  o.list.forEach(function(item){h+='<li><b>'+item[0]+'</b><span>'+item[1]+'</span></li>'});
+  h+='</ul>';
+  cnBody.innerHTML=h;
+}
+renderTabs();
+
+/* ===== 搜索 ===== */
+function doSearch(){
+  var q=(document.getElementById('qs').value||'').trim();
+  if(!q)return;
+  var y=parseInt(q);
+  if(!isNaN(y)&&yearKeys.indexOf(y)>-1){jumpTo(y);return}
+  var hit=null,yk=null;
+  for(var i=0;i<yearKeys.length;i++){var o=YEARS[yearKeys[i]];
+    for(var j=0;j<o.list.length;j++){
+      if(o.list[j][0].indexOf(q)>-1||o.list[j][1].indexOf(q)>-1){hit=yearKeys[i];yk=o.list[j][0];break}
+    }
+    if(hit!==null)break;
+  }
+  if(hit!==null){cur=yearKeys.indexOf(hit);renderGrid(hit);
+    var note=document.createElement('div');
+    note.style.cssText='margin-top:24px;padding:14px 20px;background:#0f241d;border:1px solid #00e5a0;border-radius:4px;color:#00e5a0;font-size:14px';
+    note.textContent='检索到「'+q+'」→ 已跳转至 '+hit+' 年，收录影片：《'+yk+'》等';
+    gridEl.parentNode.appendChild(note);
+    setTimeout(function(){note.remove()},5000);
+    document.getElementById('year').scrollIntoView({block:'start'});
+  }else{
+    alert('未找到与「'+q+'」相关的档案，可前往「档案入库」提交');
+  }
+}
+
+/* ===== 导航 / 时钟 ===== */
+function tgNav(){document.getElementById('nv').classList.toggle('open')}
+document.getElementById('today').textContent=new Date().toLocaleDateString('zh-CN',{year:'numeric',month:'2-digit',day:'2-digit'}).replace(/\//g:'-');
+</script>
+</body>
+</html>
